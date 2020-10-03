@@ -1,0 +1,17 @@
+.contaniner{
+    display: grid;
+    border: 3px blue solid;
+    grid-template-rows: auto;
+    /*grid-template-columns: 10% 100px auto 100px 100px;*/
+    /*
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "header header header ."
+        "main main navbar navbar"
+        "main main article side"
+        "aside . . side"
+        ". foot foot foot";
+        */
+        /* stretch is the default */
+        justify-items: stretch;
+}
