@@ -1,147 +1,277 @@
-nav {
-    background-color: palevioletred;
-    padding-top: 15px;
-    padding-bottom: 15px;
-}
-
-a {
-    color:black;
-    padding-left: 10px;
-    text-decoration: none;
-}
-
-body {
-    border: grey solid 15px;
-}
-
-main{
-    display: grid;
-    grid-template-rows: auto;
-    gap: 8px;
-    /*grid-template-columns: 10% 100px auto 100px 100px;*/
-    /*
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-areas:
-        "header header header ."
-        "main main navbar navbar"
-        "main main article side"
-        "aside . . side"
-        ". foot foot foot";
-        */
-        /* stretch is the default */
+@media (min-width:401px) {
+    nav{
+        background-color: pink;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        
+    }
+    a{
+        padding-left: 39px;
+        color: black;
+        text-decoration: none;
+        
+    }
+    
+    main{
+        display:  grid;
+        grid-template-rows: auto;
+        grid-template-columns: repeat(5,auto);
         justify-items: stretch;
-}
+        gap: 8px;
+    }
 
-.facebook {
-    grid-column: 5/6;
-    grid-row: 1/2;
-}
+    .facebook {
+        grid-column: 5/6;
+        grid-row: 1/2;
+    }
 
-.twitter {
-    grid-column: 5/6;
-    grid-row: 2/3;
-}
+    .twitter {
+        grid-column: 5/6;
+        grid-row: 2/3;
+    }
 
-.ce {
-    grid-column: 1/5;
-    grid-row: 1/4;
-}
-
-.anon {
+    .anon {
     grid-column: 5/6;
     grid-row: 3/4;
+    }
+
+    .familyCosumePic {
+        grid-column: 1/3;
+        grid-row: 4/6;
+    } 
+
+    .joker {
+        grid-column: 3/4;
+        grid-row: 4/6;
+    } 
+
+    .crazyHat {
+        grid-column: 4/5;
+        grid-row: 4/6;
+    } 
+
+    .pinkWigs {
+        grid-column: 5/6;
+        grid-row: 4/6;
+    }
+
+    .oldCloths{
+        grid-column: 1/2;
+        grid-row: 6/8;
+    }
+    .superhero {
+        grid-column: 2/4;
+        grid-row: 6/7;
+    }
+
+    .candy {
+        grid-column: 4/5;
+        grid-row: 6/7;
+    }
+
+    .greatHats {
+        grid-column: 5/6;
+        grid-row: 6/7;
+    }
+
+    .sc {
+        grid-column: 2/3;
+        grid-row: 7/9;
+    }
+
+    .pinkSlip {
+        grid-column: 3/5;
+        grid-row: 7/8;
+    }
+
+    .freeShipping {
+        grid-column: 5/6;
+        grid-row: 7/8;
+    }
+
+    .kidsDressed1 {
+        grid-column: 3/4;
+        grid-row: 8/9;
+    }
+
+    .kidsDressed2{
+        grid-column: 4/5;
+        grid-row: 8/9;
+    }
+    .sign{
+        grid-column: 5/6;
+        grid-row: 8/9;
+    }
+    .mask{
+        grid-column: 1/2;
+        grid-row: 9/10;
+    }
+    .colorMask{
+        grid-column: 2/4;
+        grid-row: 9/10;
+    }
+    .ce{
+        grid-column: 1/5;
+        grid-row: 1/4;
+    }
+
+    .props{
+        grid-column: 1/2;
+        grid-row: 8/9;
+    }
+
+    body{
+        border: 20px solid grey;
+    }
+
+    footer{
+        grid-column: 5/6;
+        grid-row: 9/10;
+        color: red;
+        align-items: stretch;
+        text-align: right;
+        display: none;
+    }
+
+    p{
+        grid-column: 5/6;
+        grid-row: 9/10;
+        color: red;
+        align-items: stretch;
+        text-align: right;
+        padding-top: 70px;
+        display: block;
+    }
 }
 
-.familyCosumePic {
-    grid-column: 1/3;
-    grid-row: 4/6;
-}
+@media(max-width:400px){
+    nav{
+        background-color: pink;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+    }
 
-.joker {
-    grid-column: 3/4;
-    grid-row: 4/6;
-}
+    a{
+        padding-left: 39px;
+        color: black;
+        text-decoration: none;
+        
+    }
+    
+    main{
+        display:  grid;
+        grid-template-columns: repeat(5, 20%);
+        justify-items: stretch;
+        gap: 5px;
+        width: calc(100% - 20px);
+    }
 
-.crazyHat {
-    grid-column: 4/5;
-    grid-row: 4/6;
-}
+    .facebook{
+        grid-column: 1/2;
+        grid-row:5/6;
+    }
 
-.pinkWigs {
+    .twitter{
+        grid-column: 1/2;
+        grid-row: 6/7;
+    }
+    .anon {
     grid-column: 5/6;
-    grid-row: 4/6;
-}
-
-.oldCloths {
-    grid-column: 1/2;
-    grid-row: 6/8;
-}
-
-.superhero {
-    grid-column: 2/4;
-    grid-row: 6/7;
-}
-
-.candy {
-    grid-column: 4/5;
-    grid-row: 6/7;
-}
-
-.greatHats {
-    grid-column: 5/6;
-    grid-row: 6/7;
-}
-
-.props {
-    grid-column: 1/2;
-    grid-row: 8/9;
-}
-
-.sc {
-    grid-column: 2/3;
-    grid-row: 7/9;
-}
-
-.pinkSlip {
-    grid-column: 3/5;
-    grid-row: 7/8;
-}
-
-.freeShipping {
-    grid-column: 5/6;
-    grid-row: 7/8;
-}
-
-.kidsDressed1 {
-    grid-column: 3/4;
-    grid-row: 8/9;
-}
-
-.kidsDressed2 {
-    grid-column: 4/5;
-    grid-row: 8/9;
-}
-
-.sign {
-    grid-column: 5/6;
-    grid-row: 8/9;
-}
-
-.mask {
-    grid-column: 1/2;
-    grid-row: 9/10;
-}
-
-.colorMask {
-    grid-column: 2/4;
-    grid-row: 9/10;
-}
-
-p {
-    grid-column: 5/6;
-    grid-row: 9/10;
-    color: red;
-    align-items: stretch;
-    text-align: right;
-    padding-top: 70px;
+    grid-row: 5/7;
+    }
+    .familyCosumePic {
+        grid-column: 1/3;
+        grid-row: 7/10;
+    }
+    .joker {
+        grid-column: 3/4;
+        grid-row: 7/10;
+    }
+    .crazyHat {
+        grid-column: 4/5;
+        grid-row: 7/10;
+    }
+    .pinkWigs {
+        grid-column: 5/6;
+        grid-row: 7/10;
+    }
+    .oldCloths {
+        grid-column: 1/2;
+        grid-row: 10/13;
+    }
+    .superhero {
+        grid-column: 2/4;
+        grid-row: 10/12;
+    }
+    .candy {
+        grid-column: 4/5;
+        grid-row: 10/12;
+    }
+    .greatHats {
+        grid-column: 5/6;
+        grid-row: 10/12;
+    }
+    .sc {
+        grid-column: 2/3;
+        grid-row: 12/14;
+    }
+    .pinkSlip {
+        grid-column: 3/5;
+        grid-row: 12/13;
+    }
+    .freeShipping {
+        grid-column: 5/6;
+        grid-row: 12/13;
+    }
+    .kidsDressed1 {
+        grid-column: 3/4;
+        grid-row: 13/14;
+    }
+    .kidsDressed2 {
+        grid-column: 4/5;
+        grid-row: 13/14;
+    }
+    .sign {
+        grid-column: 5/6;
+        grid-row: 13/14;
+    }
+    .mask {
+        grid-column: 2/3;
+        grid-row: 5/7;
+    }
+    .colorMask {
+        grid-column: 3/5;
+        grid-row: 5/7;
+    }
+    .logo{
+        grid-column: 1/6;
+        grid-row: 1/5;
+    }
+    .props{
+        grid-column: 1/2;
+        grid-row: 13/14;
+    }
+    body{
+        border: 15px solid grey;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .item{
+        height:auto;
+        width:100%;
+        justify-items:end;
+    }
+    footer{
+        background-color: pink;
+        color: black;
+        margin-bottom: 0px;
+        display: block;
+    }
+    p{
+        display:none;
+    }
 }
